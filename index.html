@@ -56,25 +56,12 @@
 
     <script>
         // Crear confeti
-        function createConfetti() {
-            const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
-            
-            for (let i = 0; i < 40; i++) {
-                const confetti = document.createElement('div');
-                confetti.className = 'confetti';
-                confetti.style.left = Math.random() * 100 + 'vw';
-                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                confetti.style.animationDuration = (Math.random() * 5 + 5) + 's';
-                confetti.style.animationDelay = (Math.random() * 5) + 's';
-                document.body.appendChild(confetti);
-            }
-        }
-        
+ 
         // Crear globos
         function createBalloons() {
             const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff', '#ff8800'];
             
-            for (let i = 0; i < 9; i++) {
+            for (let i = 0; i < 10; i++) {
                 const balloon = document.createElement('div');
                 balloon.className = 'balloon';
                 balloon.style.setProperty('--i', Math.random());
