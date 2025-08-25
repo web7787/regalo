@@ -56,12 +56,16 @@
 
     <script>
         // Crear confeti
- 
+        function createConfetti() {
+            const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+  
+        }
+        
         // Crear globos
         function createBalloons() {
             const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff', '#ff8800'];
             
-            for (let i = 0; i < 10; i++) {
+            for (let i = 0; i < 9; i++) {
                 const balloon = document.createElement('div');
                 balloon.className = 'balloon';
                 balloon.style.setProperty('--i', Math.random());
