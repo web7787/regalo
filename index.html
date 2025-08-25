@@ -8,6 +8,41 @@
     <link rel="icon" href="#" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>¡Feliz Cumpleaños!</title>
+    <style>
+        .greetings {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.greetings > span {
+    animation: glow 2.5s ease-in-out infinite;
+    display: inline-block;
+    animation-delay: calc(var(--i) * 0.1s); /* delay dinámico */
+}
+
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff;
+        transform: scale(1.05);
+    }
+    50% {
+        text-shadow: 0 0 30px #4d79ff, 0 0 50px #4d79ff, 0 0 60px #4d79ff;
+        transform: scale(1.1);
+    }
+}
+
+
+.greetings > span:nth-child(1) { animation-delay: 0.1s; }
+.greetings > span:nth-child(2) { animation-delay: 0.2s; }
+.greetings > span:nth-child(3) { animation-delay: 0.3s; }
+.greetings > span:nth-child(4) { animation-delay: 0.4s; }
+.greetings > span:nth-child(5) { animation-delay: 0.5s; }
+.greetings > span:nth-child(6) { animation-delay: 0.6s; }
+.greetings > span:nth-child(7) { animation-delay: 0.7s; }
+.greetings > span:nth-child(8) { animation-delay: 0.8s; }
+    </style>
 </head>
 <body>
     <div class="container">
