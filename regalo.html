@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="regalo.css ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>¡Tu Regalo Especial!</title>
+</head>
+<body>
+    <div class="night"></div>
+    <div class="birthday-background">
+        <div class="floating-elements">
+            <div class="floating-balloons"></div>
+            <div class="floating-confetti"></div>
+            <div class="twinkling-stars"></div>
+        </div>
+        
+        <!-- Efectos especiales de explosión -->
+        <div class="explosion-effect" id="explosionEffect"></div>
+        <div class="confetti-floor" id="confettiFloor"></div>
+        
+        <!-- Contenedor del regalo que desaparecerá -->
+        <div class="gift-animation-container" id="giftContainer">
+            <div class="gift-box">
+                <div class="box">
+                    <div class="box-top">
+                        <div class="box-lid">
+                            <div class="ribbon"></div>
+                            <div class="bow">
+                                <div class="bow-center"></div>
+                                <div class="bow-loop bow-left"></div>
+                                <div class="bow-loop bow-right"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-bottom">
+                        <div class="box-content">
+                            <div class="sparkle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="light-effect"></div>
+            
+            <!-- Botón para abrir el regalo -->
+            <button class="action-button open-gift-btn" id="openGiftBtn">
+                <i class="fas fa-gift"></i> Abrir Regalo
+            </button>
+        </div>
+        
+        <!-- Contenedor de la carta que aparecerá después -->
+        <div class="letter-container" id="letterContainer">
+            <div class="letter">
+                <div class="letter-content">
+                    <h1 class="letter-title">¡Feliz Cumpleaños <span class="name">Leslie</span>!</h1>
+                    <div class="lyrics-scroll">
+                        <div class="scroll-content">
+                            <div class="lyrics-container">
+                                <p class="lyric-line">.</p>
+                                <p class="lyric-line">En un día feliz</p>
+                                <p class="lyric-line">Una niña nació</p>
+                                <p class="lyric-line">Que se llama Leslie</p>
+                                <p class="lyric-line">Y que sea feliz</p>
+                                <p class="lyric-line">🎶</p>
+                                <p class="lyric-line">Al partir su pastel</p>
+                                <p class="lyric-line">Un deseo pidió!</p>
+                                <p class="lyric-line">¡Y que se cumpla ese deseo!</p>
+                                <p class="lyric-line">¡Y que sea feliz!</p><br>
+                                <p class="lyric-line">¡Feliz Cumpleañooooosss!</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botón para soplar velas (oculto inicialmente) -->
+            <button class="action-button blow-candles-btn" id="blowCandlesBtn" style="display: none;">
+                <i class="fas fa-wind"></i> Soplar Velas
+            </button>
+        </div>
+        
+        <!-- Área de velas -->
+  <!-- Área de velas -->
+<!-- Área de velas -->
+<div class="candle-container" id="candleContainer">
+    <div class="candle-text">¡Sopla o toca las velas para apagarlas!</div><br>
+    <div class="candle-text">¡Y pide un deseooo!</div><br><br>
+    <div class="candles">
+        <div class="candle" id="candle1">
+            <div class="flame"></div>
+        </div>
+        <div class="candle" id="candle2">
+            <div class="flame"></div>
+        </div>
+        <div class="candle" id="candle3">
+            <div class="flame"></div>
+        </div>
+        <div class="candle" id="candle4">
+            <div class="flame"></div>
+        </div>
+        <div class="candle" id="candle5">
+            <div class="flame"></div>
+        </div>
+    </div>
+</div>
+
+<!-- El pastel se creará automáticamente con JavaScript -->
+        
+        <!-- Piñata virtual -->
+        <div class="pinata-container" id="pinataContainer">
+            <div class="pinata-instructions">¡Rompe la piñata para descubrir la sorpresa final!</div>
+            <div class="pinata" id="pinata">
+                <div class="pinata-body">
+                    <img src="img/pinata.png" alt="Piñata" style="width: 150px; height: 200px;">
+                </div>
+                <div class="pinata-decoration"></div>
+            </div>
+            
+            <!-- Botón para romper piñata -->
+            <button class="action-button break-pinata-btn" id="breakPinataBtn">
+                <i class="fas fa-burst"></i> Romper Piñata
+            </button>
+        </div>
+        
+        <!-- Regalo final después de romper la piñata -->
+        <div class="final-gift-container" id="finalGiftContainer">
+            <div class="final-gift">
+                <div class="final-gift-icon">🎁</div>
+                <h2 class="final-gift-title">¡Felicidades!</h2>
+                <p class="final-gift-message">Has desbloqueado tu regalo especial</p>
+                <div class="final-gift-content" style="margin-left: 30%;">
+                    <img id="randomGiftImage"  alt="Regalo especial" style="width: 150px; height: 200px;">
+                    
+                </div>
+                <p class="gift-description">Eres la persona más especial en este día. ¡Disfruta tu regalo!</p>
+            </div><br>
+            
+            <!-- Botones finales DENTRO del contenedor del regalo final -->
+            <div class="final-buttons" id="finalButtons">
+                <button class="back-button" onclick="window.location.href='index.html'">
+                    <i class="fas fa-home"></i> Volver al Inicio
+                </button>
+                <button class="back-button" onclick="window.location.href='regalo.html'">
+                    <i class="fas fa-redo"></i> Ver de Nuevo
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="birthdaySong" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+    
+    <audio id="blowSound" preload="auto">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-wind-whistling-1361.mp3" type="audio/mpeg">
+    </audio>
+    
+    <audio id="pinataSound" preload="auto">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-jump-coin-216.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="regalo.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

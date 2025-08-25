@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>¡Feliz Cumpleaños!</title>
+</head>
+<body>
+    <div class="container">
+        <div class="birthday-cake">🎂</div>
+        
+        <div class="greetings">
+            <span>F</span>
+            <span>E</span>
+            <span>L</span>
+            <span>I</span>
+            <span>Z</span>
+            &nbsp;
+            <span>C</span>
+            <span>U</span>
+            <span>M</span>
+            <span>P</span>
+            <span>L</span>
+            <span>E</span>
+        </div>
+        
+        <div class="greetings">
+            <span>L</span>
+            <span>E</span>
+            <span>S</span>
+            <span>L</span>
+            <span>I</span>
+            <span>E</span>
+        </div>
+        
+        <div class="message">
+            <span>¡Que este día esté lleno de alegría y momentos especiales!</span>
+        </div>
+        
+        <div class="message">
+            <span>Tengo un regalo especial para ti 🎁</span>
+        </div>
+        
+        <div class="button">
+            <button>
+                <a href="regalo.html">Abrir regalo <i class="fas fa-gift"></i></a>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Crear confeti
+        function createConfetti() {
+            const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+            
+            for (let i = 0; i < 100; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animationDuration = (Math.random() * 5 + 5) + 's';
+                confetti.style.animationDelay = (Math.random() * 5) + 's';
+                document.body.appendChild(confetti);
+            }
+        }
+        
+        // Crear globos
+        function createBalloons() {
+            const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff', '#ff8800'];
+            
+            for (let i = 0; i < 15; i++) {
+                const balloon = document.createElement('div');
+                balloon.className = 'balloon';
+                balloon.style.setProperty('--i', Math.random());
+                balloon.style.left = Math.random() * 100 + 'vw';
+                balloon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                balloon.style.animationDuration = (Math.random() * 10 + 15) + 's';
+                document.body.appendChild(balloon);
+            }
+        }
+        
+        // Iniciar efectos
+        document.addEventListener('DOMContentLoaded', function() {
+            createConfetti();
+            createBalloons();
+        });
+    </script>
+</body>
+</html>
